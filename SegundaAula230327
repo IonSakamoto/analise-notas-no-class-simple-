@@ -1,0 +1,59 @@
+
+
+import java.util.Scanner;
+
+
+public class SegundaAula230327 {
+
+    public static void main(String[] args) {
+       Scanner entrada = new Scanner(System.in);
+        double[] notas = new double[3];
+        double mediaFinal = 0;
+        
+            do{
+            
+                System.out.println("Digite a nota 1 ");
+            notas[0] = entrada.nextDouble();
+            }while(notas[0] <0 );
+            
+            if(notas[0] > 10) {
+            System.out.println("Numero Invalido, digite novamente");
+            notas[0] = entrada.nextDouble();
+        }
+               
+            do{
+                
+                System.out.println("Digite a nota 2 ");
+            notas[1] = entrada.nextDouble();
+            }while(notas[1] < 0);
+            
+             if (notas[1] > 10) {
+            System.out.println("Numero Invalido, digite novamente");
+            notas[1] = entrada.nextDouble();
+        }
+             
+            
+             do {
+                 
+                System.out.println("Digite a nota 3 ");
+            notas[2] = entrada.nextDouble();
+            } while (notas[2] < 0);
+             
+             if (notas[2] > 10) {
+            System.out.println("Numero Invalido, digite novamente");
+            notas[2] = entrada.nextDouble();
+        }
+             
+            mediaFinal = 0.3* notas[0] + 0.3* notas[1] + 0.4* notas[2];
+            System.out.println("A nota final vale " + mediaFinal);
+            
+            if(mediaFinal <= 5) {
+                System.out.println("reprovado");
+                System.out.println("Tente na proxima parceiro");
+        }
+            else {
+            System.out.println("Aprovado");
+            System.out.println("Parabens");            
+    }             
+    }  
+}
